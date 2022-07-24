@@ -11,7 +11,8 @@
     function App(){
         const [counter, setCounter] = React.useState(0);
         const onClick = () => {
-          setCounter(counter + 1);
+          // setCounter(counter + 1); 1. 값 바로 전달
+          setCounter((current) => current + 1);  //2. 함수사용 -> 현재값을 보장하고 싶다면 함수 사용하자!
         }
         return(
             <div>
